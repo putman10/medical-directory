@@ -21,11 +21,14 @@ $(document).ready(function() {
 
     returnedDoctorsPromise.then(function(response) {
       let body = JSON.parse(response);
-        console.log(body);
+      let counter = 0;
+      body.data.forEach(function(doctor){
+        $("#results").append("<div class='col-md-6 doctor-box'id=doctor" + counter + "></div>");
+        $("#doctor" + counter).append(doctor.profile.first_name);
+        $("#doctor" + counter).append(doctor.profile.last_name);
+        counter ++;
+      })
 
-        body.data.forEach(function(doctor){
-          $("#results").append(doctor.profile.first_name);
-        })
     }, function(error) {
       $('.showErrors').text(`There was an error processing your request: ${error.message}`);
     });
