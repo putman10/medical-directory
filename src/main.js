@@ -44,7 +44,7 @@ $(document).ready(function() {
           $("#doctor" + counter).append("<img src='" + doctor.profile.image_url + "' alt='doctorimage' >");
           $("#doctor" + counter).append("<h3 class='name'>" + doctor.profile.first_name + " " + doctor.profile.last_name + " " + doctor.profile.title + "</h3>");
           $("#doctor" + counter).append("<p class='address'>" + doctor.practices["0"].visit_address.street + "<br>" + doctor.practices["0"].visit_address.city + ", " + doctor.practices["0"].visit_address.state + " " + doctor.practices["0"].visit_address.zip + "</p>");
-          $("#doctor" + counter).append("<p class='phone'>" + doctor.practices["0"].phones["0"].number + "</p>");
+          $("#doctor" + counter).append("<p class='phone'><a href='tel:" + doctor.practices["0"].phones["0"].number + "'>" + doctor.practices["0"].phones["0"].number + "</a></p>");
           if(doctor.practices["0"].accepts_new_patients == true) {
             $("#doctor" + counter).append("<p class='new-patients'><span class='bold'>Accepting New Patients:</span> Yes</p>");
           } else {
@@ -52,8 +52,10 @@ $(document).ready(function() {
           }
           $("#doctor" + counter).append("<p class='description'>" + doctor.specialties["0"].description + "</p>");
           $("#doctor" + counter).append("<p class='gender'>" + doctor.profile.gender + "</p>");
-          $("#doctor" + counter).append("<p class='type'>" + doctor.specialties["0"].actor + "</p>");
-          $("#doctor" + counter).append("<p class='category'>" + doctor.specialties["0"].category + "</p>");
+          $("#doctor" + counter).append("<div class='specialties' id='specialties" + counter + "'><p class='bold'>Specialties:</p></div>");
+          for (let s = 0; s < doctor.specialties.length; s++) {
+            $("#specialties" + counter).append("<p>" + doctor.specialties[s].name + "</p>");
+          }
           $("#doctor" + counter).append("<div class='languages' id='language" + counter + "'><p class='bold'>Languages:</p></div>");
           for (let i = 0; i < doctor.profile.languages.length; i++) {
             $("#language" + counter).append("<p>" + doctor.profile.languages[i].name + "</p>");
