@@ -1,8 +1,8 @@
-export class GeocoderAPI{
-  getLatLong(zip) {
+export class BetterDoctorAPI{
+  getQualifiedDoctors(symptoms) {
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
-      let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${zip}&key=${process.env.API_KEY}`;
+      let url = `https://api.betterdoctor.com/2016-03-01/doctors?location=37.773%2C-122.413%2C100&user_location=37.773%2C-122.413&skip=0&limit=10&user_key=${process.env.API_KEY}`;
 
       request.onload = function() {
         if (this.status === 200) {
