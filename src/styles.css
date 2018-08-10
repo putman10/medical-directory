@@ -24,3 +24,9 @@ body {
 .bold {
     font-weight: 700;
 }
+
+.languages,
+.licenses{
+    padding: 5px;
+    background: lightgrey;
+}
