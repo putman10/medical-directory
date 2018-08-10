@@ -14,10 +14,18 @@
     <h1>Medical Directory</h1>
     <div class="showErrors">
     </div>
+    <p id="demo"></p>
     <form id="symptoms-form">
       <div class="form-group" id="symptoms-group">
         <label for="symptoms">Enter your symptom(s) to recieve a list of qualifed Doctors in your area:</label>
         <input type="text" name="symptoms" class="form-control">
+      </div>
+      <p class="bold">and(or)</p>
+      <div class="form-group" id="specialties-group">
+        <label for="specialties">Select a Specialty from the dropdown menu to search for doctors with that Specialty:</label>
+        <select name="specialties" id="specialties">
+          <option value='0' selected>Select a Specialty</option>
+        </select>
       </div>
       <p class="bold">and(or)</p>
       <div class="form-group" id="name-group">

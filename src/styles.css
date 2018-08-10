@@ -49,6 +49,10 @@ body {
     margin-top: 15px;
 }
 
+select {
+    width: 100%;
+}
+
 #results {
     margin-top: 2rem;
 }
