@@ -29,7 +29,7 @@ console.log(doctorName);
             $("#doctor" + counter).append("<p class='address'>" + doctor.practices["0"].visit_address.street + "<br>" + doctor.practices["0"].visit_address.city + ", " + doctor.practices["0"].visit_address.state + " " + doctor.practices["0"].visit_address.zip + "</p>");
             $("#doctor" + counter).append("<p class='phone'>" + doctor.practices["0"].phones["0"].number + "</p>");
             if(doctor.practices["0"].accepts_new_patients == true) {
-              $("#doctor" + counter).append("<p class='new-patients'>Accepting New Patients: Yes</p>");
+              $("#doctor" + counter).append("<p class='new-patients'><span class='bold'>Accepting New Patients:</span> Yes</p>");
             } else {
               $("#doctor" + counter).append("<p class='new-patients'>Accepting New Patients: Not at this time</p>");
             }
