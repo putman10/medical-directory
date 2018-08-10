@@ -59,9 +59,46 @@ select {
     width: 100%;
 }
 
+#linkedin {
+    background-image: url('./img/linkedin-logo.png');
+    width: 30px;
+    height: 30px;
+    margin: 5px 15px;
+    position: absolute;
+    background-size: contain;
+}
+
+#github {
+    background-image: url('./img/github-logo.png');
+    width: 30px;
+    height: 30px;
+    margin: 5px 15px;
+    position: absolute;
+    background-size: contain;
+}
+
+#github:hover,
+#linkedin:hover {
+  background-color: white;
+  border-radius: 15px;
+}
+
+.footer {
+    background: black;
+    color: white;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.footer p{
+    line-height: 43px;
+    margin-bottom: 0;
+}
+
 #results {
     margin-top: 2rem;
-    background-color: lightgray;
+    background-color: #ffb350;
 }
 
 .bold {
