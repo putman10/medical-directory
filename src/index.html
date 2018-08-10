@@ -7,10 +7,11 @@
   <div class="container">
     <h1>Medical Directory</h1>
     <form id="symptoms-form">
-      <div class="form-group">
+      <div class="form-group" id="symptoms-group">
         <label for="symptoms">Enter your symptom(s) to recieve a list of qualifed Doctors in your area:</label>
         <input type="text" name="symptoms" class="form-control" id="symptoms">
       </div>
+      <button type="submit" class="btn btn-primary" id="new-symptom" name="new-symptom">Add Another Symptom</button>
       <button type="submit" class="btn btn-primary" name="submit-button">Find Doctors</button>
     </form>
     <div class="row" id="results">
