@@ -1,5 +1,17 @@
 body {
-  background-color: #fffff0;
+    background-image: url('./img/husk.png');
+}
+
+.header {
+  background: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header .container {
+  background-image: url('./img/logo.png');
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .doctor-box {
