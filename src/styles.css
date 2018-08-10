@@ -10,3 +10,13 @@ body {
 .doctor-box:nth-of-type(odd) {
     border-right-color: transparent;
 }
+
+.gender,
+.category {
+    text-transform: capitalize;
+}
+
+.btn-info {
+  margin-bottom:1rem;
+  font-size: 10px;
+}
