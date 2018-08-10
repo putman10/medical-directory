@@ -12,8 +12,11 @@
         <input type="text" name="symptoms" class="form-control">
       </div>
       <button type="submit" class="btn btn-info" id="new-symptom" name="new-symptom">Add Another</button>
-      <br>
-      <button type="submit" class="btn btn-primary" name="submit-button">Find Doctors</button>
+      <div class="form-group" id="name-group">
+        <label for="name">Enter a doctor's name to search for a specific doctor:</label>
+        <input type="text" id="name" name="name" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary" id="find-doctor" name="submit-button">Find Doctors</button>
     </form>
     <div class="row" id="results">
     </div>

@@ -12,12 +12,13 @@ $(document).ready(function() {
   $("#symptoms-form").submit(function(event){
     event.preventDefault();
     $("#results").text("");
-    let symptoms= $('input[name=symptoms]').map(function(){
+    let doctorName = $("#name").val();
+    let symptoms = $('input[name=symptoms]').map(function(){
       return this.value;
     }).get();
-
+console.log(doctorName);
     let betterDoctor = new BetterDoctorAPI();
-    let returnedDoctorsPromise = betterDoctor.getQualifiedDoctors(symptoms);
+    let returnedDoctorsPromise = betterDoctor.getQualifiedDoctors(symptoms, doctorName);
 
     returnedDoctorsPromise.then(function(response) {
       let body = JSON.parse(response);
