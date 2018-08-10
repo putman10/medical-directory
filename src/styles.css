@@ -30,3 +30,7 @@ body {
     padding: 5px;
     background: lightgrey;
 }
+
+.showErrors {
+  display: none;
+}

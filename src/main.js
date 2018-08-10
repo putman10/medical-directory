@@ -24,6 +24,7 @@ console.log(doctorName);
       let body = JSON.parse(response);
       console.log(body);
       let counter = 0;
+      $('.showErrors').hide();
       body.data.forEach(function(doctor){
         $("#results").append("<div class='col-md-3 doctor-box'id=doctor" + counter + "></div>");
         $("#doctor" + counter).append("<img src='" + doctor.profile.image_url + "' alt='doctorimage' >");
@@ -53,6 +54,7 @@ console.log(doctorName);
 
     }, function(error) {
       $('.showErrors').text(`There was an error processing your request: ${error.message}`);
+      $('.showErrors').show();
     });
 
 
