@@ -1,5 +1,4 @@
 import {BetterDoctorAPI} from './medical-service';
-import {GeocoderAPI} from './geocoder';
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,7 +10,6 @@ $(document).ready(function() {
 
   allSpecialties.then(function(response) {
     let body1 = JSON.parse(response);
-    console.log(body1);
 
     for (let n = 0; n < body1.data.length; n++) {
       $("#specialties").append("<option value='" + body1.data[n].uid + "'>" + body1.data[n].name + "</option>");
@@ -27,13 +25,11 @@ $(document).ready(function() {
     let specialty = $("#specialties").val();
     let doctorName = $("#name").val();
     let symptoms = $('input[name=symptoms]').val();
-    console.log(doctorName);
     let betterDoctor = new BetterDoctorAPI();
     let returnedDoctorsPromise = betterDoctor.getQualifiedDoctors(symptoms, doctorName, specialty);
 
     returnedDoctorsPromise.then(function(response) {
       let body = JSON.parse(response);
-      console.log(body);
       let counter = 0;
       $('.showErrors').hide();
       if(body.meta.count == 0){
@@ -64,16 +60,12 @@ $(document).ready(function() {
           for (let x = 0; x < doctor.licenses.length; x++) {
             $("#licenses" + counter).append("<p>" + doctor.licenses[x].number + ' ' + doctor.licenses[x].state + "</p>");
           }
-
           counter ++;
         });
       }
-
     }, function(error) {
       $('.showErrors').text(`There was an error processing your request: ${error.message}`);
       $('.showErrors').show();
     });
-
-
   });
 });

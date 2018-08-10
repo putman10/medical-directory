@@ -6,6 +6,8 @@
 
 ## Description
 
+The goal was to test my knowledge of using APIs and integrating with Javascript webpages.
+
 As we all know, everybody needs to see a doctor sometimes. But finding a doctor that provides the services you need nearby can be time consuming. To facilitate this, you have been asked to create a website where users may enter a medical issue (ie: “sore throat”, "rash", etc.) into a form, submit it, and receive a list of doctors in your city (Portland or Seattle depending on where you are) who can treat their medical issue.
 
 ## Specs
@@ -45,6 +47,7 @@ As we all know, everybody needs to see a doctor sometimes. But finding a doctor 
 * ESLint
 * Jasmine
 * Karma
+* BetterDoctor API
 
 ## Links
 

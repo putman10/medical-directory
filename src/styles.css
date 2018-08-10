@@ -28,9 +28,17 @@ body {
 
 .doctor-box {
     margin: 7px 10px 10px 0px;
-    border: 1px solid black;
+    border: 1px solid #c7c7c7;
     padding: 15px;
     background-color: white;
+}
+
+#symptoms-form .bold {
+  color: #ffb350;
+}
+
+.doctor-box img{
+    border-radius: 8px;
 }
 
 .doctor-box:nth-of-type(4n) {
@@ -96,9 +104,18 @@ select {
     margin-bottom: 0;
 }
 
+.footer a{
+    color:#ffb350;
+}
+
+.footer a:hover{
+    color:white;
+    text-decoration: none;
+}
+
 #results {
     margin-top: 2rem;
-    background-color: #ffb350;
+    background-image: url('./img/husk.png');
 }
 
 .bold {
