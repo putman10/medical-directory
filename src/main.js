@@ -25,6 +25,7 @@ $(document).ready(function() {
     let specialty = $("#specialties").val();
     let doctorName = $("#name").val();
     let symptoms = $('input[name=symptoms]').val();
+    $('#symptoms-form')[0].reset();
     let betterDoctor = new BetterDoctorAPI();
     let returnedDoctorsPromise = betterDoctor.getQualifiedDoctors(symptoms, doctorName, specialty);
 
