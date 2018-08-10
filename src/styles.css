@@ -15,7 +15,7 @@ body {
 #main {
     padding: 3rem 2rem;
     background: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
     position: relative;
 }
 
@@ -27,14 +27,20 @@ body {
 }
 
 .doctor-box {
-    margin: 10px 0;
+    margin: 7px 10px 10px 0px;
     border: 1px solid black;
     padding: 15px;
+    background-color: white;
 }
 
-.doctor-box:nth-of-type(odd) {
-    border-right-color: transparent;
+.doctor-box:nth-of-type(4n) {
+    margin-right:0px;
 }
+
+.doctor-box:nth-of-type(4n + 1) {
+    margin-left:7px;
+}
+
 
 .gender,
 .category {
@@ -55,6 +61,7 @@ select {
 
 #results {
     margin-top: 2rem;
+    background-color: lightgray;
 }
 
 .bold {
@@ -70,4 +77,10 @@ select {
 
 .showErrors {
   display: none;
+}
+
+@media (min-width: 768px){
+.col-md-3 {
+    max-width: 24%;
+}
 }
